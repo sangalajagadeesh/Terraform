@@ -13,3 +13,24 @@
          * Azure has ARM Templates
      * Terraform can automate infra creation in almost all the virtual environments and Terraform is an open source software and provides enterprise.
      * Terraform also allows us to deal with multiple environments
+## 2nd Class 26/Jul/2023,
+### What Is Terraform? 
+Terraform is an IAC tool, used primarily by DevOps teams to automate various infrastructure tasks. The provisioning of cloud resources, for instance, is one of the main use cases of Terraform. It’s a cloud-agnostic, open-source provisioning tool written in the Go language and created by HashiCorp.
+## Architecture of Terraform:
+* Terraform is developed in Go language and installation of terraform is one executable
+* Providers are not part of terraform installations as we try to create infra, as part of initializations providers are downloaded
+* Providers have resources and datasources as part of it
+![preview](images/image2.png)
+### Concepts of Terraform:
+* Provider: This determines the target area to create infra structure
+     * [Refer Here](https://registry.terraform.io/browse/providers) for the list of provider
+#### Terraform provider means:     
+* A provider in Terraform is a plugin that enables interaction with an API. This includes Cloud providers and Software-as-a-service providers. The providers are specified in the Terraform configuration code. They tell Terraform which services it needs to interact with
+* Terraform providers are of three categories
+     * official
+     * partner
+     * community
+* [Refer Here](https://developer.hashicorp.com/terraform/language/providers) for providers documenation by hashicorp
+* Note: For you reference we have used the following template
+
+
