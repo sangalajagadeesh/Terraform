@@ -1,7 +1,7 @@
 ## Terraform: 25/Jul/2023,
 ### Story of LT
 * Basic architecture
-* ![preview](images/image1.png)
+![preview](images/image1.png)
 * LT has 3 customers who are ready to buy
      * TCS wants to run application on AWS
      * Infosys on Azure
