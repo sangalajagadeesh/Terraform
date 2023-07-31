@@ -38,15 +38,42 @@ Terraform is an IAC tool, used primarily by DevOps teams to automate various inf
 terraform {
   required_providers {
     aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
+      source = "hashicorp/aws"
+      version = "2.33.0"
+    }
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=3.0.0"
     }
   }
 }
 
-# Configure the AWS Provider
+provider "azurerm" {
+    features {
+
+    }
+}
+
 provider "aws" {
-  region = "us-east-1"
+    region = "us-west-2"
+}
+
+resource "aws_instance" "fromtf" {
+    ami = "ami-03f65b8614a860c29"
+    tags = {
+      Name ="from terraform"
+    }
+    key_name = "my_id_rsa"
+    vpc_security_group_ids = ["sg-05adaf452b268c335"]
+    instance_type = "t2.micro"
+
+}
+
+
+resource "azurerm_resource_group" "test" {
+    name = "test"
+    location = "eastus"
+
 }
 
 ```
