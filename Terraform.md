@@ -126,6 +126,7 @@ vpc_security_group_ids = ["sg-05adaf452b268c335"]
 instance_type = "t2.micro"</li>
 </ul>
 }
-“`
+
+
 ##### Installing terraform [Refer Here](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 * Commands   
