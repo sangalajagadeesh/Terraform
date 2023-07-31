@@ -33,7 +33,7 @@ Terraform is an IAC tool, used primarily by DevOps teams to automate various inf
 * [Refer Here](https://developer.hashicorp.com/terraform/language/providers) for providers documenation by hashicorp
 * Note: For you reference we have used the following template
 #####Terraform AWS Provider:
-```yml
+```json
 
 terraform {
   required_providers {
