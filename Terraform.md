@@ -33,8 +33,8 @@ Terraform is an IAC tool, used primarily by DevOps teams to automate various inf
 * [Refer Here](https://developer.hashicorp.com/terraform/language/providers) for providers documenation by hashicorp
 * Note: For you reference we have used the following template
 ##### Terraform AWS Provider:
-```
 
+```
 terraform {
   required_providers {
     aws = {
@@ -76,4 +76,6 @@ resource "azurerm_resource_group" "test" {
 
 }
 ```
-
+* Arguments and Attributes:
+    * Argument refers to inputs in terraform
+    * Attributes refers to outputs in terraform
