@@ -79,3 +79,53 @@ resource "azurerm_resource_group" "test" {
 * Arguments and Attributes:
     * Argument refers to inputs in terraform
     * Attributes refers to outputs in terraform
+
+#### 3rd class 27/Jul/2023,
+## Infrastructure as a Code (IaC)  
+* This allows us to declare the infrastructure i.e. we would represent our needs in some format and the tool does the rest of creation/deletion/updating the resources.
+* We deal with declarative language and desired state.  
+### Infra Provisioning
+* This is about a tool which lets you express your infrastructure as a code and manages multiple environments and reusability
+### Terraform
+* This is infra provisioning tool and supports infrastructure as code, terraform uses Hashicorp configuration language HCL
+#### Ways of Working with Terraform (First version)
+* Create the infrastructure manually atleast once as this helps
+     * in figuring out inputs to be passed.
+     * order of creation
+     * every resource to be part of architecture
+* Figure out the right provider and resources
+### Syntaxes in Terraform
+* Provider: Refer Here for official docs
+   * syntax
+provider '<name-of-provider>' {
+arg-name-1 = arg-value-1
+..
+arg-name-n = arg-value-n
+}
+   * Example
+provider "aws" {
+region = "us-west-2"
+}
+* Generally we need to configure credentials for providers as well.
+* resource: This represents the infrastructural element to be created Refer Here
+* syntax
+resource "<resource_type>" "name" {
+arg-name-1 = arg-value-1
+..
+arg-name-n = arg-value-n
+}
+* Example
+“`
+resource "aws_instance" "fromtf" {
+ami = "ami-03f65b8614a860c29"
+tags = {
+Name ="from terraform"
+}
+key_name = "my_id_rsa"
+vpc_security_group_ids = ["sg-05adaf452b268c335"]
+instance_type = "t2.micro"</li>
+</ul>
+}
+“`
+##### Installing terraform [Refer Here](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+* Commands   
