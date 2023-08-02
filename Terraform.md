@@ -130,3 +130,17 @@ instance_type = "t2.micro"</li>
 
 ##### Installing terraform [Refer Here](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 * Commands   
+```
+choco install vscode terraform -y
+```
+![preview](images/image3.png)
+#### Note:
+* Windows: [Refer Here](https://www.youtube.com/watch?v=9guzVbZPGuw&list=PLuVH8Jaq3mLud3sVDvJ-gJ__0zd15wGDd&index=17)for installing necessary softwares
+git
+* windows terminal for windows 10 [Refer Here](https://www.youtube.com/watch?v=qLVn2EvPsYc&list=PLuVH8Jaq3mLud3sVDvJ-gJ__0zd15wGDd&index=12)
+#### Mac:
+* Homebrew [Refer Here](https://brew.sh/)
+* git `brew install git`
+visual studio code `brew install --cask visual-studio-code`
+terraform `brew install terraform`
+azure cli `brew install azure-cli`
