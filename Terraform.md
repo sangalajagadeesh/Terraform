@@ -133,7 +133,7 @@ instance_type = "t2.micro"</li>
 ```
 choco install vscode terraform -y
 ```
-![preview](./images/image3.png)
+![preview](images/image3.png)
 #### Note:
 * Windows: [Refer Here](https://www.youtube.com/watch?v=9guzVbZPGuw&list=PLuVH8Jaq3mLud3sVDvJ-gJ__0zd15wGDd&index=17)for installing necessary softwares
 git
