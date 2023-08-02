@@ -141,6 +141,6 @@ git
 #### Mac:
 * Homebrew [Refer Here](https://brew.sh/)
 * git `brew install git`
-visual studio code `brew install --cask visual-studio-code`
-terraform `brew install terraform`
-azure cli `brew install azure-cli`
+* visual studio code `brew install --cask visual-studio-code`
+* terraform `brew install terraform`
+* azure cli `brew install azure-cli`
