@@ -144,3 +144,47 @@ git
 * visual studio code `brew install --cask visual-studio-code`
 * terraform `brew install terraform`
 * azure cli `brew install azure-cli`
+### 4th class 28/Jul/2023,
+#### Activity-2: Create a s3 bucket
+* Navigate to s3
+![preview](images/image5.png)
+![preview](images/image6.png)
+![preview](images/image7.png)
+![preview](images/image8.png)
+![preview](images/image9.png)
+* Resource:
+   * s3 bucket
+* inputs:
+   * region
+   * bucket name
+#### Infra Provisioning using terraform.
+* Create an empty folder
+* [Refer Here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs) to provider docs
+* [Refer Here](https://directdevops.blog/2023/07/27/aws-classroomnotes-27-jul-2023/) for basic user creation steps and [Refer Here](https://sst.dev/chapters/create-an-iam-user.html)
+* Lets find the resource  
+![preview](images/image10.png) 
+* [Refer Here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) for s3 resource
+* Now look at argument reference [Refer Here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket#argument-reference) of resource
+* Handling credenitals in AWS
+    * install aws cli
+    * aws configure
+* [Refer Here](https://github.com/asquarezone/TerraformZone/commit/a3c6f608f6e22b0c461f958b440856946f825052) for sample activity
+#### Activity 3: Create a storge account in Azure
+* Refer Here for the official docs on how to create storage account
+* Resources:
+     * Resource Group
+         * inputs:
+           * name
+           * location
+     * storage account
+         * inputs:
+         * resource group name
+         * location
+         * name of storage account
+* [Refer Here](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs) for terraform provider
+* [Refer Here](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) to install azure cli `az login`
+* [Refer Here](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group) for resource group docs and [Refer Here](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_accou) for resource group docs   
+![preview](images/image11.png)      
+![preview](images/image12.png)
+* [Refer Here](https://github.com/asquarezone/TerraformZone/commit/3c82fe735bee3e9d83579ba377d3f447f0605329) for the changes
+
