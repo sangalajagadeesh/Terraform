@@ -147,7 +147,7 @@ git
 ### 4th class 28/Jul/2023,
 #### Activity-2: Create a s3 bucket
 * Navigate to s3
-![preview](images/image5.png)
+* ![preview](images/image5.png)
 ![preview](images/image6.png)
 ![preview](images/image7.png)
 ![preview](images/image8.png)
@@ -187,4 +187,42 @@ git
 ![preview](images/image11.png)      
 ![preview](images/image12.png)
 * [Refer Here](https://github.com/asquarezone/TerraformZone/commit/3c82fe735bee3e9d83579ba377d3f447f0605329) for the changes
+### 5th Class 29/Jul/2023,
+## Terraform contd 
+* Order of Creation: Order of creation can be acheived in two ways
+     * explicit dependency using `depends_on` [Refer Here](https://developer.hashicorp.com/terraform/language/meta-arguments/depends_on)
+          * [Refer Here](https://github.com/asquarezone/TerraformZone/commit/6062bd0454bf293cb68d65e8d624983c419728f) for the usage
+     * implicit dependency: Terraform figures out by looking at your configuration/template
+          * When the output (attribute) of one resource is used as input (argument) to other
+          * [Refer Here](https://github.com/asquarezone/TerraformZone/commit/d08e36cd8bd1c68069d85e364f4ca623ce658c55) for the changes
+* To use one resource in other resource argument `<resource_type>.<name>`
+```
+depends_on = [ azurerm_resource_group.myresg ]
+```
+### Best Practice to write terraform template (Based on what we have covered so far)
+* Terraform reads all the `.tf` files in the folder and then combines as one file and executes the terraform => While writing terraform templates there is no need write everything in one file
+     * From now one lets have one tf for provdier and then one tf file for logical group of resources.
+     * All the variables will be in one file `inputs.tf` and all the outputs will be in the file `outputs.tf`
+![preview](images/image13.png)     
+Use `terraform fmt` to align the terraform template into common canonical format Refer Here for the changes done 
+## Manual Steps for next activity
+#### Install the Azure CLI tool
+* You will use the Azure CLI tool to authenticate with Azure.
 
+* Windows with PowerShell
+
+* macOS install with Homebrew
+* Open your PowerShell prompt as an administrator and run the following command:
+```
+Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'; rm .\AzureCLI.msi
+```
+#### Authenticate using the Azure CLI
+* Terraform must authenticate to Azure to create infrastructure.
+* In your terminal, use the Azure CLI tool to setup your account permissions locally.
+```
+az login
+```
+### * Azure    
+![preview](images/image14.png)
+### * AWS
+![preview](images/image15.png)
